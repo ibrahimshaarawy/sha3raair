@@ -8,18 +8,18 @@ admins = Admin.create(
 
 planes = Plane.create([
 	{
-		type: 'A380',
-		seatconfig: [3, 10, 100, 6, 20, 80, 10, 50, 40]
+		planeType: 'A380',
+		seatConfig: [3, 10, 100, 6, 20, 80, 10, 50, 40]
 	},
 	{
-		type: 'test',
-		seatconfig: [1, 1, 100, 1, 1, 80, 1, 1, 40]
+		planeType: 'test',
+		seatConfig: [1, 1, 100, 1, 1, 80, 1, 1, 40]
 	}
 ])
 
 flights = Flight.create([
 	{
-		depart: 'Cairo',
+		departure: 'Cairo',
 		destination: 'Dubai',
 		plane: planes.second
 	}
