@@ -3,11 +3,13 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   namespace :api do
-  	namespace :v1 do
+  	namespace :admin do
+  		resources :admins, only: [:create, :destroy, :index, :show]
+  		resources :planes, param: :planeType, only: [:create, :destroy]
   		resources :flights, only [:create, :destroy]
-  		resources :planes, only[:create, :destroy]
-  		resources :admins, only[:create, :destroy]
-  		resources :seats, only[:create, :destroy]
+  	namespace :passenger do
+  		resources :flights, only: [:index, :show]
+  		resources :seats, param: :pnr, only: [:index, :update, :show]
   	end
   end
 
