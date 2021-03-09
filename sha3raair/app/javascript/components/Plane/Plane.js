@@ -21,7 +21,7 @@ const Plane = () => {
         const id = flight.plane_id
         axios.post('/api/adminstrator/flights', flight)
         .then(resp => {
-            const seatConfig = axios.get('api/adminstrator/planes', { params: { id } }).then(res => res.data);
+            const seatConfig = axios.get('api/adminstrator/planes/', { params: { id } }).then(res => res.data);
             console.log(seatConfig)
             setFlight({departure:'', destination:'', plane_id: ''})
         })
