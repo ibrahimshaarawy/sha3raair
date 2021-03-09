@@ -287,3 +287,638 @@ FOREIGN KEY ("flight_id")
   [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" ORDER BY "flights"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT "flights".* FROM "flights" ORDER BY "flights"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mSeat Load (0.6ms)[0m  [1m[34mSELECT "seats".* FROM "seats" ORDER BY "seats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" ORDER BY "flights"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" ORDER BY "flights"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights" ORDER BY "flights"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" ORDER BY "flights"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights" ORDER BY "flights"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (77.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sha3raair_development"[0m
+  [1m[35m (38.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sha3raair_test"[0m
+  [1m[35m (165.5ms)[0m  [1m[35mCREATE DATABASE "sha3raair_development" ENCODING = 'unicode'[0m
+  [1m[35m (61.6ms)[0m  [1m[35mCREATE DATABASE "sha3raair_test" ENCODING = 'unicode'[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2376612103853446200)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAdmins (20210307210024)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "user" character varying, "pass" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210307210024"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePlanes (20210307210048)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "planes" ("id" bigserial primary key, "planeType" character varying, "seatConfig" integer[] DEFAULT '{}', "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210307210048"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFlights (20210307210300)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "flights" ("id" bigserial primary key, "destination" character varying, "departure" character varying, "plane_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_486a835be7"
+FOREIGN KEY ("plane_id")
+  REFERENCES "planes" ("id")
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_flights_on_plane_id" ON "flights" ("plane_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210307210300"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSeats (20210307210615)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "seats" ("id" bigserial primary key, "pnr" character varying, "available" boolean, "price" integer, "flight_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_60426f0535"
+FOREIGN KEY ("flight_id")
+  REFERENCES "flights" ("id")
+)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_seats_on_flight_id" ON "seats" ("flight_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210307210615"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-03-09 06:46:19.438321"], ["updated_at", "2021-03-09 06:46:19.438321"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2376612103853446200)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Create (0.8ms)[0m  [1m[32mINSERT INTO "admins" ("user", "pass", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user", "sha3raboy"], ["pass", "mu_sha_87"], ["created_at", "2021-03-09 06:46:25.049342"], ["updated_at", "2021-03-09 06:46:25.049342"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlane Create (0.7ms)[0m  [1m[32mINSERT INTO "planes" ("planeType", "seatConfig", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["planeType", "A380"], ["seatConfig", "{3,10,100,6,20,80,10,50,40}"], ["created_at", "2021-03-09 06:46:25.061242"], ["updated_at", "2021-03-09 06:46:25.061242"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlane Create (0.2ms)[0m  [1m[32mINSERT INTO "planes" ("planeType", "seatConfig", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["planeType", "test"], ["seatConfig", "{1,1,100,1,1,80,1,1,40}"], ["created_at", "2021-03-09 06:46:25.064820"], ["updated_at", "2021-03-09 06:46:25.064820"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFlight Create (1.0ms)[0m  [1m[32mINSERT INTO "flights" ("destination", "departure", "plane_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["destination", "Dubai"], ["departure", "Cairo"], ["plane_id", 2], ["created_at", "2021-03-09 06:46:25.089775"], ["updated_at", "2021-03-09 06:46:25.089775"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSeat Create (0.7ms)[0m  [1m[32mINSERT INTO "seats" ("pnr", "available", "flight_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["pnr", "F1234"], ["available", true], ["flight_id", 1], ["created_at", "2021-03-09 06:46:25.112810"], ["updated_at", "2021-03-09 06:46:25.112810"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSeat Create (0.3ms)[0m  [1m[32mINSERT INTO "seats" ("pnr", "available", "flight_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["pnr", "B1234"], ["available", true], ["flight_id", 1], ["created_at", "2021-03-09 06:46:25.116965"], ["updated_at", "2021-03-09 06:46:25.116965"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSeat Create (0.3ms)[0m  [1m[32mINSERT INTO "seats" ("pnr", "available", "flight_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["pnr", "E1234"], ["available", true], ["flight_id", 1], ["created_at", "2021-03-09 06:46:25.126506"], ["updated_at", "2021-03-09 06:46:25.126506"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" ORDER BY "flights"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSeat Load (0.4ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."flight_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["flight_id", 1], ["LIMIT", 11]]
+Started GET "/api/admin.json" for 127.0.0.1 at 2021-03-09 09:14:12 +0200
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as JSON
+  Parameters: {"path"=>"api/admin"}
+No template found for PagesController#index, rendering head :no_content
+Completed 204 No Content in 12ms (ActiveRecord: 0.0ms | Allocations: 3023)
+
+
+Started GET "/api/admin/admin.json" for 127.0.0.1 at 2021-03-09 09:15:45 +0200
+Processing by PagesController#index as JSON
+  Parameters: {"path"=>"api/admin/admin"}
+No template found for PagesController#index, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 1471)
+
+
+Started GET "/api/admin/admins.json" for 127.0.0.1 at 2021-03-09 09:17:39 +0200
+Processing by Api::Admin::AdminsController#index as JSON
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 1259)
+
+
+  
+NoMethodError (undefined method `all' for Api::Admin:Module):
+  
+app/controllers/api/admin/admins_controller.rb:5:in `index'
+Started GET "/api/admin/admins.json" for 127.0.0.1 at 2021-03-09 09:24:33 +0200
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as JSON
+  Parameters: {"path"=>"api/admin/admins"}
+No template found for PagesController#index, rendering head :no_content
+Completed 204 No Content in 10ms (ActiveRecord: 0.0ms | Allocations: 2618)
+
+
+Started GET "/api/adminstrator/admins.json" for 127.0.0.1 at 2021-03-09 09:24:49 +0200
+Processing by Api::Adminstrator::AdminsController#index as JSON
+  [1m[36mAdmin Load (2.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/api/adminstrator/admins_controller.rb:7:in `index'
+Completed 200 OK in 25ms (Views: 0.4ms | ActiveRecord: 8.6ms | Allocations: 5398)
+
+
+Started GET "/api/adminstrator/seats.json" for 127.0.0.1 at 2021-03-09 09:25:01 +0200
+Processing by PagesController#index as JSON
+  Parameters: {"path"=>"api/adminstrator/seats"}
+No template found for PagesController#index, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 1469)
+
+
+Started GET "/api/adminstrator/planes.json" for 127.0.0.1 at 2021-03-09 09:25:22 +0200
+Processing by Api::Adminstrator::PlanesController#index as JSON
+  [1m[36mPlane Load (1.3ms)[0m  [1m[34mSELECT "planes".* FROM "planes"[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:7:in `index'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 4.3ms | Allocations: 4430)
+
+
+Started GET "/api/adminstrator/planes/A380" for 127.0.0.1 at 2021-03-09 09:31:20 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"A380"}
+  [1m[36mPlane Load (6.6ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "A380"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:11:in `show'
+Completed 200 OK in 91ms (Views: 0.1ms | ActiveRecord: 24.7ms | Allocations: 7308)
+
+
+Started POST "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 09:34:47 +0200
+Processing by Api::Adminstrator::PlanesController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 462)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.3) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.3) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.1.3) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.3) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.3) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.3) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.3) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.3) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.3) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.3) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.3) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.3) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.3) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.3) lib/rails/engine.rb:539:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/api/adminstrator/planes." for 127.0.0.1 at 2021-03-09 09:35:08 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"api/adminstrator/planes."}
+No template found for PagesController#index, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 989)
+
+
+Started GET "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 09:35:10 +0200
+Processing by Api::Adminstrator::PlanesController#index as */*
+  [1m[36mPlane Load (1.0ms)[0m  [1m[34mSELECT "planes".* FROM "planes"[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:7:in `index'
+Completed 200 OK in 30ms (Views: 0.2ms | ActiveRecord: 9.3ms | Allocations: 4882)
+
+
+Started POST "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 09:42:12 +0200
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::Adminstrator::PlanesController#create as */*
+  Parameters: {"planeType"=>"B777", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40], "plane"=>{"planeType"=>"B777", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40]}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :seatConfig[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.5ms | Allocations: 2169)
+
+
+  
+NoMethodError (undefined method `new' for nil:NilClass):
+  
+app/controllers/api/adminstrator/planes_controller.rb:19:in `create'
+Started POST "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 09:44:24 +0200
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::Adminstrator::PlanesController#create as */*
+  Parameters: {"planeType"=>"B777", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40], "plane"=>{"planeType"=>"B777", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40]}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :seatConfig[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+  [1m[36mPlane Create (2.1ms)[0m  [1m[32mINSERT INTO "planes" ("planeType", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["planeType", "B777"], ["created_at", "2021-03-09 07:44:24.803688"], ["updated_at", "2021-03-09 07:44:24.803688"]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+Completed 200 OK in 22ms (Views: 0.2ms | ActiveRecord: 8.7ms | Allocations: 7222)
+
+
+Started GET "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 09:47:44 +0200
+Processing by Api::Adminstrator::PlanesController#index as */*
+  Parameters: {"planeType"=>"B777", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40], "plane"=>{"planeType"=>"B777", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40]}}
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes"[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 1442)
+
+
+Started POST "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 09:50:45 +0200
+Processing by Api::Adminstrator::PlanesController#create as */*
+  Parameters: {"planeType"=>"B779", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40], "plane"=>{"planeType"=>"B779", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40]}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :seatConfig[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+  [1m[36mPlane Create (1.0ms)[0m  [1m[32mINSERT INTO "planes" ("planeType", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["planeType", "B779"], ["created_at", "2021-03-09 07:50:45.294437"], ["updated_at", "2021-03-09 07:50:45.294437"]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+Completed 200 OK in 11ms (Views: 0.8ms | ActiveRecord: 3.5ms | Allocations: 2587)
+
+
+Started POST "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 09:57:58 +0200
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::Adminstrator::PlanesController#create as */*
+  Parameters: {"planeType"=>"B780", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40], "plane"=>{"planeType"=>"B780", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40]}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :seatConfig[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+  [1m[36mPlane Create (1.0ms)[0m  [1m[32mINSERT INTO "planes" ("planeType", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["planeType", "B780"], ["created_at", "2021-03-09 07:57:58.780354"], ["updated_at", "2021-03-09 07:57:58.780354"]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 9.4ms | Allocations: 7222)
+
+
+Started POST "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 10:04:46 +0200
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::Adminstrator::PlanesController#create as */*
+  Parameters: {"planeType"=>"B780", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40], "plane"=>{"planeType"=>"B780", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40]}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+  [1m[36mPlane Create (1.6ms)[0m  [1m[32mINSERT INTO "planes" ("planeType", "seatConfig", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["planeType", "B780"], ["seatConfig", "{3,5,120,4,10,100,10,10,40}"], ["created_at", "2021-03-09 08:04:46.902871"], ["updated_at", "2021-03-09 08:04:46.902871"]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 8.8ms | Allocations: 7284)
+
+
+Started GET "/api/adminstrator/planes/B780" for 127.0.0.1 at 2021-03-09 10:33:22 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"B780", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40], "planType"=>"B780", "plane"=>{"planeType"=>"B780", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40]}}
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "B780"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 44ms (Views: 0.8ms | ActiveRecord: 14.0ms | Allocations: 4852)
+
+
+Started POST "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 10:33:55 +0200
+Processing by Api::Adminstrator::PlanesController#create as */*
+  Parameters: {"planeType"=>"B7800", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40], "plane"=>{"planeType"=>"B7800", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40]}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+  [1m[36mPlane Create (1.1ms)[0m  [1m[32mINSERT INTO "planes" ("planeType", "seatConfig", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["planeType", "B7800"], ["seatConfig", "{3,5,120,4,10,100,10,10,40}"], ["created_at", "2021-03-09 08:33:55.340309"], ["updated_at", "2021-03-09 08:33:55.340309"]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 3.2ms | Allocations: 2633)
+
+
+Started GET "/api/adminstrator/planes/B7800" for 127.0.0.1 at 2021-03-09 10:34:06 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"B780", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40], "planType"=>"B7800", "plane"=>{"planeType"=>"B780", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40]}}
+  [1m[36mPlane Load (0.9ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "B780"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 1015)
+
+
+Started POST "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 10:34:23 +0200
+Processing by Api::Adminstrator::PlanesController#create as */*
+  Parameters: {"planeType"=>"B78000", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40], "plane"=>{"planeType"=>"B78000", "seatConfig"=>[3, 5, 120, 4, 10, 100, 10, 10, 40]}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+  [1m[36mPlane Create (14.1ms)[0m  [1m[32mINSERT INTO "planes" ("planeType", "seatConfig", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["planeType", "B78000"], ["seatConfig", "{3,5,120,4,10,100,10,10,40}"], ["created_at", "2021-03-09 08:34:23.871709"], ["updated_at", "2021-03-09 08:34:23.871709"]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:21:in `create'
+Completed 200 OK in 74ms (Views: 0.1ms | ActiveRecord: 16.4ms | Allocations: 2613)
+
+
+Started GET "/api/adminstrator/planes/B78000" for 127.0.0.1 at 2021-03-09 10:34:51 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planType"=>"B78000", "plane"=>{}}
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 1139)
+
+
+Started GET "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 10:35:44 +0200
+Processing by Api::Adminstrator::PlanesController#index as */*
+  Parameters: {"plane"=>{}}
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes"[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1657)
+
+
+Started GET "/api/adminstrator/planes/A380" for 127.0.0.1 at 2021-03-09 10:36:32 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planType"=>"A380", "plane"=>{}}
+  [1m[36mPlane Load (1.1ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 1.1ms | Allocations: 1081)
+
+
+Started GET "/api/adminstrator/planes/A380" for 127.0.0.1 at 2021-03-09 10:37:28 +0200
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"A380", "plane"=>{}}
+  [1m[36mPlane Load (1.0ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "A380"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 24ms (Views: 0.2ms | ActiveRecord: 6.6ms | Allocations: 5940)
+
+
+Started GET "/api/adminstrator/planes/B78000" for 127.0.0.1 at 2021-03-09 10:37:34 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"B78000", "plane"=>{}}
+  [1m[36mPlane Load (0.9ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "B78000"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 1037)
+
+
+Started GET "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 10:37:39 +0200
+Processing by Api::Adminstrator::PlanesController#index as */*
+  Parameters: {"plane"=>{}}
+  [1m[36mPlane Load (1.3ms)[0m  [1m[34mSELECT "planes".* FROM "planes"[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 1696)
+
+
+Started DELETE "/api/adminstrator/planes/B777" for 127.0.0.1 at 2021-03-09 10:38:21 +0200
+Processing by Api::Adminstrator::PlanesController#destroy as */*
+  Parameters: {"planeType"=>"B777", "plane"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "B777"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:31:in `destroy'
+  [1m[36mPlane Destroy (4.2ms)[0m  [1m[31mDELETE FROM "planes" WHERE "planes"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:31:in `destroy'
+Completed 204 No Content in 12ms (ActiveRecord: 6.8ms | Allocations: 2856)
+
+
+Started DELETE "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 10:38:27 +0200
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/adminstrator/planes"):
+  
+Started GET "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 10:38:33 +0200
+Processing by Api::Adminstrator::PlanesController#index as */*
+  Parameters: {"plane"=>{}}
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes"[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1575)
+
+
+Started DELETE "/api/adminstrator/planes/B780" for 127.0.0.1 at 2021-03-09 10:38:58 +0200
+Processing by Api::Adminstrator::PlanesController#destroy as */*
+  Parameters: {"planeType"=>"B780", "plane"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mPlane Load (0.9ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "B780"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:31:in `destroy'
+  [1m[36mPlane Destroy (1.5ms)[0m  [1m[31mDELETE FROM "planes" WHERE "planes"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:31:in `destroy'
+Completed 204 No Content in 10ms (ActiveRecord: 4.3ms | Allocations: 2633)
+
+
+Started GET "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 10:39:07 +0200
+Processing by Api::Adminstrator::PlanesController#index as */*
+  Parameters: {"plane"=>{}}
+  [1m[36mPlane Load (1.0ms)[0m  [1m[34mSELECT "planes".* FROM "planes"[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 1505)
+
+
+Started DELETE "/api/adminstrator/planes/B779" for 127.0.0.1 at 2021-03-09 10:39:23 +0200
+Processing by Api::Adminstrator::PlanesController#destroy as */*
+  Parameters: {"planeType"=>"B779", "plane"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "B779"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:31:in `destroy'
+  [1m[36mPlane Destroy (2.0ms)[0m  [1m[31mDELETE FROM "planes" WHERE "planes"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:31:in `destroy'
+Completed 204 No Content in 9ms (ActiveRecord: 4.5ms | Allocations: 2645)
+
+
+Started DELETE "/api/adminstrator/planes/B7800" for 127.0.0.1 at 2021-03-09 10:39:28 +0200
+Processing by Api::Adminstrator::PlanesController#destroy as */*
+  Parameters: {"planeType"=>"B7800", "plane"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mPlane Load (1.1ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "B7800"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:31:in `destroy'
+  [1m[36mPlane Destroy (1.2ms)[0m  [1m[31mDELETE FROM "planes" WHERE "planes"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:31:in `destroy'
+Completed 204 No Content in 10ms (ActiveRecord: 4.6ms | Allocations: 2632)
+
+
+Started DELETE "/api/adminstrator/planes/B78000" for 127.0.0.1 at 2021-03-09 10:39:31 +0200
+Processing by Api::Adminstrator::PlanesController#destroy as */*
+  Parameters: {"planeType"=>"B78000", "plane"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mPlane Load (1.0ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "B78000"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:31:in `destroy'
+  [1m[36mPlane Destroy (1.8ms)[0m  [1m[31mDELETE FROM "planes" WHERE "planes"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:31:in `destroy'
+Completed 204 No Content in 10ms (ActiveRecord: 4.8ms | Allocations: 2632)
+
+
+Started DELETE "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 10:39:35 +0200
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/adminstrator/planes"):
+  
+Started GET "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 10:39:39 +0200
+Processing by Api::Adminstrator::PlanesController#index as */*
+  Parameters: {"plane"=>{}}
+  [1m[36mPlane Load (0.9ms)[0m  [1m[34mSELECT "planes".* FROM "planes"[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 1252)
+
+
+Started GET "/api/passenger/seats" for 127.0.0.1 at 2021-03-09 10:49:57 +0200
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::Passenger::SeatsController#index as */*
+  Parameters: {"seat"=>{}}
+  [1m[36mSeat Load (1.6ms)[0m  [1m[34mSELECT "seats".* FROM "seats"[0m
+  ↳ app/controllers/api/passenger/seats_controller.rb:9:in `index'
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 7.4ms | Allocations: 5798)
+
+
+Started GET "/api/passenger/flights" for 127.0.0.1 at 2021-03-09 10:50:04 +0200
+Processing by Api::Passenger::FlightsController#index as */*
+  Parameters: {"flight"=>{}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 1.4ms | Allocations: 998)
+
+
+  
+NoMethodError (undefined method `all' for nil:NilClass):
+  
+app/controllers/api/passenger/flights_controller.rb:7:in `index'
+Started GET "/api/passenger/flights" for 127.0.0.1 at 2021-03-09 10:50:27 +0200
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::Passenger::FlightsController#index as */*
+  Parameters: {"flight"=>{}}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.1ms | Allocations: 1846)
+
+
+  
+ArgumentError (seats is not specified as a relationship on FlightSerializer):
+  
+app/controllers/api/passenger/flights_controller.rb:9:in `new'
+app/controllers/api/passenger/flights_controller.rb:9:in `index'
+Started GET "/api/passenger/flights" for 127.0.0.1 at 2021-03-09 10:51:32 +0200
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::Passenger::FlightsController#index as */*
+  Parameters: {"flight"=>{}}
+  [1m[36mFlight Load (1.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "seats"."id" FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 1]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 12.1ms | Allocations: 13706)
+
+
+  
+NoMethodError (undefined method `seats' for #<Flight id: 1, destination: "Dubai", departure: "Cairo", plane_id: 2, created_at: "2021-03-09 06:46:25.089775000 +0000", updated_at: "2021-03-09 06:46:25.089775000 +0000">
+Did you mean?  seat
+               seat=):
+  
+app/controllers/api/passenger/flights_controller.rb:9:in `index'
+Started GET "/api/passenger/flights" for 127.0.0.1 at 2021-03-09 10:56:46 +0200
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::Passenger::FlightsController#index as */*
+  Parameters: {"flight"=>{}}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.3ms | Allocations: 1902)
+
+
+  
+ArgumentError (seat is not specified as a relationship on FlightSerializer):
+  
+app/controllers/api/passenger/flights_controller.rb:9:in `new'
+app/controllers/api/passenger/flights_controller.rb:9:in `index'
+Started GET "/api/passenger/flights" for 127.0.0.1 at 2021-03-09 10:57:14 +0200
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::Passenger::FlightsController#index as */*
+  Parameters: {"flight"=>{}}
+  [1m[36mFlight Load (1.0ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "seats"."id" FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 1]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[36mSeat Load (0.8ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 1]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+Completed 200 OK in 46ms (Views: 0.2ms | ActiveRecord: 12.9ms | Allocations: 15329)
+
+
+Started PATCH "/api/passenger/seats/F1234" for 127.0.0.1 at 2021-03-09 11:00:37 +0200
+Processing by Api::Passenger::SeatsController#update as */*
+  Parameters: {"price"=>120, "pnr"=>"F1234", "seat"=>{"price"=>120}}
+Can't verify CSRF token authenticity.
+  [1m[36mSeat Load (3.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/passenger/seats_controller.rb:19:in `update'
+Completed 404 Not Found in 14ms (ActiveRecord: 3.1ms | Allocations: 1491)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Seat with 'id'=F1234):
+  
+app/controllers/api/passenger/seats_controller.rb:19:in `update'
+Started PATCH "/api/passenger/seats/F1234" for 127.0.0.1 at 2021-03-09 11:01:51 +0200
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::Passenger::SeatsController#update as */*
+  Parameters: {"price"=>120, "pnr"=>"F1234", "seat"=>{"price"=>120}}
+Can't verify CSRF token authenticity.
+  [1m[36mSeat Load (0.9ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/passenger/seats_controller.rb:19:in `update'
+Completed 404 Not Found in 16ms (ActiveRecord: 6.3ms | Allocations: 3286)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Seat with 'id'=F1234):
+  
+app/controllers/api/passenger/seats_controller.rb:19:in `update'
+Started PATCH "/api/passenger/seats/F1234" for 127.0.0.1 at 2021-03-09 11:02:41 +0200
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::Passenger::SeatsController#update as */*
+  Parameters: {"price"=>120, "pnr"=>"F1234", "seat"=>{"price"=>120}}
+Can't verify CSRF token authenticity.
+  [1m[36mSeat Load (0.9ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."pnr" = $1 LIMIT $2[0m  [["pnr", "F1234"], ["LIMIT", 1]]
+  ↳ app/controllers/api/passenger/seats_controller.rb:19:in `update'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/passenger/seats_controller.rb:21:in `update'
+  [1m[36mFlight Load (2.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/passenger/seats_controller.rb:21:in `update'
+  [1m[36mSeat Update (1.6ms)[0m  [1m[33mUPDATE "seats" SET "price" = $1, "updated_at" = $2 WHERE "seats"."id" = $3[0m  [["price", 120], ["updated_at", "2021-03-09 09:02:41.326758"], ["id", 1]]
+  ↳ app/controllers/api/passenger/seats_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/passenger/seats_controller.rb:21:in `update'
+Completed 200 OK in 53ms (Views: 0.3ms | ActiveRecord: 16.4ms | Allocations: 18091)
+
+
