@@ -14,13 +14,14 @@ const FlightForm = (props) => {
                     <input type="text" name="destination" placeholder="e.x. Paris..." onChange={props.handleChange} value={props.flight.destination}/>
                 </div>
                 <div>
-                <select onChange={props.handleChange} name="planeID">
+                <select onChange={props.handleChange} name="plane_id">
                     <option value=""> -- select a plane -- </option>
                     <option value="1">A380</option>
                     <option value="2">test</option>
                     <option value="6">B780</option>
                 </select>
                 </div>
+                <button type='submit' className='btn'>Create Flight</button>
             </form>
         </div>
     )

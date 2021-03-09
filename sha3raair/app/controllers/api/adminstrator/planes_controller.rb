@@ -10,7 +10,7 @@ module Api
 			end
 
 			def show
-				plane = Plane.find_by(planeType: params[:planeType])
+				plane = Plane.find(params[:id])
 
 				render json: PlaneSerializer.new(plane).serialized_json
 			end
