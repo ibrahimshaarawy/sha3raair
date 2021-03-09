@@ -3710,3 +3710,2590 @@ Entrypoint index = js/index-34c0473d526612236e73.js js/index-34c0473d526612236e7
 Completed 200 OK in 5450ms (Views: 5449.5ms | Allocations: 7258)
 
 
+Started GET "/api/adminstrator/planes.json" for 127.0.0.1 at 2021-03-09 21:12:56 +0200
+Processing by Api::Adminstrator::PlanesController#index as JSON
+  Parameters: {"plane"=>{}}
+  [1m[36mPlane Load (1.2ms)[0m  [1m[34mSELECT "planes".* FROM "planes"[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:9:in `index'
+Completed 200 OK in 23ms (Views: 0.5ms | ActiveRecord: 30.5ms | Allocations: 3624)
+
+
+Started GET "/api/adminstrator/flights.json" for 127.0.0.1 at 2021-03-09 21:13:16 +0200
+Processing by PagesController#index as JSON
+  Parameters: {"path"=>"api/adminstrator/flights", "page"=>{}}
+Completed 406 Not Acceptable in 10ms (ActiveRecord: 0.0ms | Allocations: 1277)
+
+
+  
+ActionController::UnknownFormat (PagesController#index is missing a template for this request format and variant.
+
+request.formats: ["application/json"]
+request.variant: []):
+  
+actionpack (6.1.3) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (6.1.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (6.1.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.3) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.3) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+actiontext (6.1.3) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.3) lib/action_text/engine.rb:55:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.3) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.3) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.3) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.3) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.3) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.3) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.3) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.3) lib/rails/engine.rb:539:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/api/passenger/flights.json" for 127.0.0.1 at 2021-03-09 21:13:34 +0200
+Processing by Api::Passenger::FlightsController#index as JSON
+  Parameters: {"flight"=>{}}
+  [1m[36mFlight Load (1.9ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "seats"."id" FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 1]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[36mSeat Load (1.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 1]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 5.4ms | Allocations: 3180)
+
+
+Started GET "/api/adminstrator/planes/A380" for 127.0.0.1 at 2021-03-09 21:20:36 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"A380", "plane"=>{}}
+  [1m[36mPlane Load (2.5ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "A380"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 58ms (Views: 0.7ms | ActiveRecord: 22.8ms | Allocations: 4452)
+
+
+Started GET "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:27:19 +0200
+Processing by Api::Adminstrator::PlanesController#index as */*
+  Parameters: {"plane"=>{}}
+  [1m[36mPlane Load (1.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes"[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:9:in `index'
+Completed 200 OK in 49ms (Views: 0.9ms | ActiveRecord: 17.4ms | Allocations: 4292)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:28:21 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: cf2339fc9fb566600698
+Version: webpack 4.46.0
+Time: 2430ms
+Built at: 03/09/2021 9:28:26 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-9f0df13e81b63a9548c6.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-9f0df13e81b63a9548c6.js.map   1.48 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-9f0df13e81b63a9548c6.js js/index-9f0df13e81b63a9548c6.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+ERROR in ./app/javascript/components/Plane/Plane.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/app/javascript/components/Plane/Plane.js: Identifier 'React' has already been declared (2:7)
+
+  1 | import React from 'react'
+> 2 | import React, { useState } from 'react'
+    |        ^
+  3 | /api/adminstrator/flights
+  4 | const Plane = () => {
+  5 |     const [destination, setDestination] = useState();
+    at Object._raise (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:776:17)
+    at Object.raiseWithData (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:769:17)
+    at Object.raise (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:737:17)
+    at ScopeHandler.checkRedeclarationInScope (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:1453:12)
+    at ScopeHandler.declareName (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:1419:12)
+    at Object.checkLVal (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10193:24)
+    at Object.parseImportSpecifierLocal (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:13632:10)
+    at Object.maybeParseDefaultImportSpecifier (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:13734:12)
+    at Object.parseImport (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:13597:31)
+    at Object.parseStatementContent (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:12284:27)
+    at Object.parseStatement (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:12184:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:12764:25)
+    at Object.parseBlockBody (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:12755:10)
+    at Object.parseProgram (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:12119:10)
+    at Object.parseTopLevel (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:12110:25)
+    at Object.parse (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:13818:10)
+    at parse (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:13870:38)
+    at parser (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/core/lib/parser/index.js:54:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/core/lib/transformation/normalize-file.js:99:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/core/lib/transformation/index.js:31:50)
+    at run.next (<anonymous>)
+    at Function.transform (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/core/lib/transform.js:27:41)
+    at transform.next (<anonymous>)
+    at step (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/gensync/index.js:261:32)
+    at /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/gensync/index.js:223:11)
+    at /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/gensync/index.js:189:28
+    at /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/core/lib/gensync-utils/async.js:72:7
+ @ ./app/javascript/components/App.js 11:0-34 54:15-20
+ @ ./app/javascript/packs/index.jsx
+ @ multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5340.4ms | Allocations: 6745)
+Completed 200 OK in 5350ms (Views: 5347.2ms | ActiveRecord: 0.0ms | Allocations: 7187)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:28:48 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: e32860293ef61ee38422
+Version: webpack 4.46.0
+Time: 2620ms
+Built at: 03/09/2021 9:28:54 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-eb77f8cbd94337a54f4d.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-eb77f8cbd94337a54f4d.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-eb77f8cbd94337a54f4d.js js/index-eb77f8cbd94337a54f4d.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5292.6ms | Allocations: 6799)
+Completed 200 OK in 5294ms (Views: 5293.3ms | ActiveRecord: 0.0ms | Allocations: 7240)
+
+
+Started GET "/api/adminstrator/planestest" for 127.0.0.1 at 2021-03-09 21:29:10 +0200
+Processing by PagesController#index as */*
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 21:29:10 +0200
+  Parameters: {"path"=>"api/adminstrator/planestest"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 48)
+[Webpacker] Everything's up-to-date. Nothing to do
+  
+Zeitwerk::NameError (expected file /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/app/controllers/api/adminstrator/flights_controller.rb to define constant Api::Adminstrator::FlightsController, but didn't):
+  
+zeitwerk (2.4.2) lib/zeitwerk/loader/callbacks.rb:18:in `on_file_autoloaded'
+zeitwerk (2.4.2) lib/zeitwerk/kernel.rb:27:in `block in require'
+<internal:kernel>:90:in `tap'
+zeitwerk (2.4.2) lib/zeitwerk/kernel.rb:26:in `require'
+activesupport (6.1.3) lib/active_support/inflector/methods.rb:288:in `const_get'
+activesupport (6.1.3) lib/active_support/inflector/methods.rb:288:in `block in constantize'
+activesupport (6.1.3) lib/active_support/inflector/methods.rb:284:in `each'
+activesupport (6.1.3) lib/active_support/inflector/methods.rb:284:in `inject'
+activesupport (6.1.3) lib/active_support/inflector/methods.rb:284:in `constantize'
+activesupport (6.1.3) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.1.3) lib/action_dispatch/http/request.rb:93:in `controller_class_for'
+actionpack (6.1.3) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (6.1.3) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (6.1.3) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (6.1.3) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.3) lib/rails/engine.rb:539:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 115.1ms | Allocations: 47245)
+Completed 200 OK in 118ms (Views: 116.9ms | ActiveRecord: 0.0ms | Allocations: 47790)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:31:02 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: da0a843692e26f06bab0
+Version: webpack 4.46.0
+Time: 2586ms
+Built at: 03/09/2021 9:31:08 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-b4ecaa900e2842bbc48f.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-b4ecaa900e2842bbc48f.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-b4ecaa900e2842bbc48f.js js/index-b4ecaa900e2842bbc48f.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5233.9ms | Allocations: 6807)
+Completed 200 OK in 5235ms (Views: 5234.6ms | ActiveRecord: 0.0ms | Allocations: 7248)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 21:31:09 +0200
+  
+ActionController::RoutingError (uninitialized constant Api::Adminstrator::FlightsController
+Did you mean?  Api::Adminstrator::FligthsController):
+  
+Started GET "/api/adminstrator/planes/$%7Bid%7D" for 127.0.0.1 at 2021-03-09 21:31:10 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"${id}"}
+  [1m[36mPlane Load (1.0ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "${id}"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 6.6ms | Allocations: 3370)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 21:31:21 +0200
+Started GET "/api/adminstrator/planes/$%7Bid%7D" for 127.0.0.1 at 2021-03-09 21:31:21 +0200
+  
+ActionController::RoutingError (uninitialized constant Api::Adminstrator::FlightsController
+Did you mean?  Api::Adminstrator::FligthsController):
+  
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"${id}"}
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "${id}"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2753)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:31:49 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: de2e948c9e649674e0b0
+Version: webpack 4.46.0
+Time: 2658ms
+Built at: 03/09/2021 9:31:54 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-5d3ba2147ea420c5df03.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-5d3ba2147ea420c5df03.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-5d3ba2147ea420c5df03.js js/index-5d3ba2147ea420c5df03.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4699.5ms | Allocations: 6806)
+Completed 200 OK in 4701ms (Views: 4699.9ms | ActiveRecord: 0.0ms | Allocations: 7249)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 21:32:01 +0200
+  
+ActionController::RoutingError (uninitialized constant Api::Adminstrator::FlightsController
+Did you mean?  Api::Adminstrator::FligthsController):
+  
+Started GET "/api/adminstrator/planes/$%7BplaneType%7D" for 127.0.0.1 at 2021-03-09 21:32:01 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"${planeType}"}
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "${planeType}"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 2958)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:32:32 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 96d49aa0ec544eb30843
+Version: webpack 4.46.0
+Time: 2660ms
+Built at: 03/09/2021 9:32:37 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-9b7b2a86805bb75c0e16.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-9b7b2a86805bb75c0e16.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-9b7b2a86805bb75c0e16.js js/index-9b7b2a86805bb75c0e16.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4712.6ms | Allocations: 6801)
+Completed 200 OK in 4715ms (Views: 4713.2ms | ActiveRecord: 0.0ms | Allocations: 7242)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 21:32:44 +0200
+  
+ActionController::RoutingError (uninitialized constant Api::Adminstrator::FlightsController
+Did you mean?  Api::Adminstrator::FligthsController):
+  
+Started GET "/api/adminstrator/planes/$%7BplaneType%7D" for 127.0.0.1 at 2021-03-09 21:32:44 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"${planeType}"}
+  [1m[36mPlane Load (0.7ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "${planeType}"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2000)
+
+
+Started GET "/api/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:33:22 +0200
+Processing by Api::Adminstrator::PlanesController#index as */*
+  Parameters: {"plane"=>{}}
+  [1m[36mPlane Load (1.1ms)[0m  [1m[34mSELECT "planes".* FROM "planes"[0m
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 1254)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:34:18 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 6a41d8f0983a5e323ab3
+Version: webpack 4.46.0
+Time: 2641ms
+Built at: 03/09/2021 9:34:23 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-c4b69a553d3d117fefdf.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-c4b69a553d3d117fefdf.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-c4b69a553d3d117fefdf.js js/index-c4b69a553d3d117fefdf.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5303.4ms | Allocations: 6810)
+Completed 200 OK in 5313ms (Views: 5311.7ms | ActiveRecord: 0.0ms | Allocations: 7252)
+
+
+Started GET "/api/adminstrator/planes/test" for 127.0.0.1 at 2021-03-09 21:34:31 +0200
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 21:34:31 +0200
+  
+ActionController::RoutingError (uninitialized constant Api::Adminstrator::FlightsController
+Did you mean?  Api::Adminstrator::FligthsController):
+  
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"test"}
+  [1m[36mPlane Load (1.4ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 1562)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:35:26 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: b40ae69b5feb0cb72316
+Version: webpack 4.46.0
+Time: 2666ms
+Built at: 03/09/2021 9:35:31 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-ff49773b086738e0485a.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-ff49773b086738e0485a.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-ff49773b086738e0485a.js js/index-ff49773b086738e0485a.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5418.4ms | Allocations: 6811)
+Completed 200 OK in 5420ms (Views: 5419.1ms | ActiveRecord: 0.0ms | Allocations: 7254)
+
+
+Started GET "/api/adminstrator/planes/test" for 127.0.0.1 at 2021-03-09 21:35:40 +0200
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 21:35:40 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"test"}
+  
+ActionController::RoutingError (uninitialized constant Api::Adminstrator::FlightsController
+Did you mean?  Api::Adminstrator::FligthsController):
+  
+  [1m[36mPlane Load (58.1ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 70ms (Views: 0.6ms | ActiveRecord: 58.1ms | Allocations: 37740)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:36:07 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 4515ab6f9c96014b040e
+Version: webpack 4.46.0
+Time: 2450ms
+Built at: 03/09/2021 9:36:11 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-8e0735bd55cce23516e8.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-8e0735bd55cce23516e8.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-8e0735bd55cce23516e8.js js/index-8e0735bd55cce23516e8.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4530.8ms | Allocations: 6807)
+Completed 200 OK in 4532ms (Views: 4531.4ms | ActiveRecord: 0.0ms | Allocations: 7250)
+
+
+Started GET "/api/adminstrator/planes/undefined" for 127.0.0.1 at 2021-03-09 21:36:17 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"undefined"}
+  [1m[36mPlane Load (0.7ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 980)
+
+
+Started GET "/api/adminstrator/planes/test" for 127.0.0.1 at 2021-03-09 21:37:33 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"test"}
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1072)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 21:37:33 +0200
+  
+ActionController::RoutingError (uninitialized constant Api::Adminstrator::FlightsController
+Did you mean?  Api::Adminstrator::FligthsController):
+  
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:39:04 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 330a5a79ccd71733eaa8
+Version: webpack 4.46.0
+Time: 2666ms
+Built at: 03/09/2021 9:39:10 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-548d110d9ef7b81d0ebf.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-548d110d9ef7b81d0ebf.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-548d110d9ef7b81d0ebf.js js/index-548d110d9ef7b81d0ebf.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5574.9ms | Allocations: 6811)
+Completed 200 OK in 5577ms (Views: 5575.7ms | ActiveRecord: 0.0ms | Allocations: 7253)
+
+
+Started GET "/api/adminstrator/planes/undefined" for 127.0.0.1 at 2021-03-09 21:39:19 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"undefined"}
+  [1m[36mPlane Load (0.7ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 991)
+
+
+Started GET "/api/adminstrator/planes/test" for 127.0.0.1 at 2021-03-09 21:39:25 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"test"}
+  [1m[36mPlane Load (0.9ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 1071)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 21:39:26 +0200
+  
+ActionController::RoutingError (uninitialized constant Api::Adminstrator::FlightsController
+Did you mean?  Api::Adminstrator::FligthsController):
+  
+Started GET "/api/adminstrator/planes/test" for 127.0.0.1 at 2021-03-09 21:39:46 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"test"}
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1072)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 21:39:46 +0200
+  
+ActionController::RoutingError (uninitialized constant Api::Adminstrator::FlightsController
+Did you mean?  Api::Adminstrator::FligthsController):
+  
+Started GET "/api/adminstrator/planes/test" for 127.0.0.1 at 2021-03-09 21:39:50 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"test"}
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1071)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 21:39:50 +0200
+  
+ActionController::RoutingError (uninitialized constant Api::Adminstrator::FlightsController
+Did you mean?  Api::Adminstrator::FligthsController):
+  
+Started GET "/api/adminstrator/planes/test" for 127.0.0.1 at 2021-03-09 21:39:51 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"test"}
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1070)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 21:39:51 +0200
+  
+ActionController::RoutingError (uninitialized constant Api::Adminstrator::FlightsController
+Did you mean?  Api::Adminstrator::FligthsController):
+  
+Started GET "/api/adminstrator/planes/test" for 127.0.0.1 at 2021-03-09 21:39:52 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"test"}
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 1071)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 21:39:52 +0200
+  
+ActionController::RoutingError (uninitialized constant Api::Adminstrator::FlightsController
+Did you mean?  Api::Adminstrator::FligthsController):
+  
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:41:02 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: ed6ac8257d413e06fe3b
+Version: webpack 4.46.0
+Time: 1767ms
+Built at: 03/09/2021 9:41:06 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-cf48977f3e6ad18ec3b1.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-cf48977f3e6ad18ec3b1.js.map   1.48 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-cf48977f3e6ad18ec3b1.js js/index-cf48977f3e6ad18ec3b1.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+ERROR in ./app/javascript/components/Plane/Plane.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/app/javascript/components/Plane/Plane.js: Unexpected reserved word 'await' (19:24)
+
+  17 |         e.preventDefault();
+  18 |         console.log(planeType)
+> 19 |         const planeID = await getPlaneID()
+     |                         ^
+  20 |         console.log(planeID)
+  21 |         fetch('http://127.0.0.1:3000/api/adminstrator/flights', { 
+  22 |             method: 'POST',
+    at Object._raise (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:776:17)
+    at Object.raiseWithData (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:769:17)
+    at Object.raise (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:737:17)
+    at Object.checkReservedWord (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:11872:12)
+    at Object.parseIdentifierName (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:11834:12)
+    at Object.parseIdentifier (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:11801:23)
+    at Object.parseExprAtom (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10893:27)
+    at Object.parseExprAtom (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:5174:20)
+    at Object.parseExprSubscripts (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10637:23)
+    at Object.parseUpdate (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10617:21)
+    at Object.parseMaybeUnary (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10595:23)
+    at Object.parseExprOps (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10456:23)
+    at Object.parseMaybeConditional (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10430:23)
+    at Object.parseMaybeAssign (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10393:21)
+    at /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10360:39
+    at Object.allowInAnd (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:12033:12)
+    at Object.parseMaybeAssignAllowIn (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10360:17)
+    at Object.parseVar (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:12845:70)
+    at Object.parseVarStatement (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:12659:10)
+    at Object.parseStatementContent (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:12251:21)
+    at Object.parseStatement (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:12184:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:12764:25)
+    at Object.parseBlockBody (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:12755:10)
+    at Object.parseBlock (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:12739:10)
+    at Object.parseFunctionBody (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:11706:24)
+    at Object.parseArrowExpression (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:11678:10)
+    at Object.parseExprAtom (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10913:25)
+    at Object.parseExprAtom (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:5174:20)
+    at Object.parseExprSubscripts (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10637:23)
+    at Object.parseUpdate (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10617:21)
+ @ ./app/javascript/components/App.js 11:0-34 54:15-20
+ @ ./app/javascript/packs/index.jsx
+ @ multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3925.6ms | Allocations: 6740)
+Completed 200 OK in 3927ms (Views: 3926.1ms | ActiveRecord: 0.0ms | Allocations: 7182)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:41:37 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 9e4dfe5ac7292062ac72
+Version: webpack 4.46.0
+Time: 1967ms
+Built at: 03/09/2021 9:41:41 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-a9f6f3a3edeb7c7ca0a7.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-a9f6f3a3edeb7c7ca0a7.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-a9f6f3a3edeb7c7ca0a7.js js/index-a9f6f3a3edeb7c7ca0a7.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3717.3ms | Allocations: 6806)
+Completed 200 OK in 3719ms (Views: 3718.1ms | ActiveRecord: 0.0ms | Allocations: 7248)
+
+
+Started GET "/api/adminstrator/planes/test" for 127.0.0.1 at 2021-03-09 21:41:49 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"test"}
+  [1m[36mPlane Load (0.7ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 1071)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:42:32 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 300edd835245ff686306
+Version: webpack 4.46.0
+Time: 1998ms
+Built at: 03/09/2021 9:42:36 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-8087931b31ded2561743.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-8087931b31ded2561743.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-8087931b31ded2561743.js js/index-8087931b31ded2561743.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3748.6ms | Allocations: 6798)
+Completed 200 OK in 3750ms (Views: 3749.2ms | ActiveRecord: 0.0ms | Allocations: 7239)
+
+
+Started GET "/api/adminstrator/planes/test" for 127.0.0.1 at 2021-03-09 21:42:43 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"test"}
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 1071)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:49:01 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 637c30b3f30165d61cfe
+Version: webpack 4.46.0
+Time: 2837ms
+Built at: 03/09/2021 9:49:06 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-c2a678814b5977a0a1ad.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-c2a678814b5977a0a1ad.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-c2a678814b5977a0a1ad.js js/index-c2a678814b5977a0a1ad.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5638.8ms | Allocations: 6802)
+Completed 200 OK in 5645ms (Views: 5640.2ms | Allocations: 7241)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:51:11 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 51b51e48f6c84486ecbb
+Version: webpack 4.46.0
+Time: 2759ms
+Built at: 03/09/2021 9:51:16 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-e5990022bf28aea984ed.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-e5990022bf28aea984ed.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-e5990022bf28aea984ed.js js/index-e5990022bf28aea984ed.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5626.5ms | Allocations: 6802)
+Completed 200 OK in 5628ms (Views: 5627.3ms | Allocations: 7241)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:53:13 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 480731b186fb25d176db
+Version: webpack 4.46.0
+Time: 2672ms
+Built at: 03/09/2021 9:53:19 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-fdc5ce2a94e78cfcba36.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-fdc5ce2a94e78cfcba36.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-fdc5ce2a94e78cfcba36.js js/index-fdc5ce2a94e78cfcba36.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5529.6ms | Allocations: 6802)
+Completed 200 OK in 5531ms (Views: 5530.3ms | Allocations: 7240)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:53:31 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 4d0387bd8d2a96305466
+Version: webpack 4.46.0
+Time: 2649ms
+Built at: 03/09/2021 9:53:36 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-274522b2167187aafd9a.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-274522b2167187aafd9a.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-274522b2167187aafd9a.js js/index-274522b2167187aafd9a.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4961.2ms | Allocations: 6799)
+Completed 200 OK in 4964ms (Views: 4961.8ms | Allocations: 7238)
+
+
+Started GET "/api/adminstrator/planes/undefined" for 127.0.0.1 at 2021-03-09 21:53:44 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"undefined"}
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 14.2ms | Allocations: 4180)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:54:06 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 3c5bbf8f4ebac67254a7
+Version: webpack 4.46.0
+Time: 1934ms
+Built at: 03/09/2021 9:54:10 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-1f15f0f64d1f3d3b6487.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-1f15f0f64d1f3d3b6487.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-1f15f0f64d1f3d3b6487.js js/index-1f15f0f64d1f3d3b6487.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3661.5ms | Allocations: 6798)
+Completed 200 OK in 3663ms (Views: 3662.1ms | ActiveRecord: 0.0ms | Allocations: 7239)
+
+
+Started GET "/api/adminstrator/planes/undefined" for 127.0.0.1 at 2021-03-09 21:54:15 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"undefined"}
+  [1m[36mPlane Load (0.9ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 979)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:54:50 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 909f598c6c6b2f4339b5
+Version: webpack 4.46.0
+Time: 1928ms
+Built at: 03/09/2021 9:54:54 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-11c9313826342449afa0.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-11c9313826342449afa0.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-11c9313826342449afa0.js js/index-11c9313826342449afa0.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3662.1ms | Allocations: 6797)
+Completed 200 OK in 3667ms (Views: 3666.3ms | ActiveRecord: 0.0ms | Allocations: 7239)
+
+
+Started GET "/api/adminstrator/planes/undefined" for 127.0.0.1 at 2021-03-09 21:55:00 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"undefined"}
+  [1m[36mPlane Load (1.3ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 980)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 21:59:27 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 4d0387bd8d2a96305466
+Version: webpack 4.46.0
+Time: 2678ms
+Built at: 03/09/2021 9:59:32 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-274522b2167187aafd9a.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-274522b2167187aafd9a.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-274522b2167187aafd9a.js js/index-274522b2167187aafd9a.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5480.1ms | Allocations: 6800)
+Completed 200 OK in 5481ms (Views: 5480.7ms | ActiveRecord: 0.0ms | Allocations: 7242)
+
+
+Started GET "/api/adminstrator/planes/undefined" for 127.0.0.1 at 2021-03-09 21:59:38 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"undefined"}
+  [1m[36mPlane Load (0.7ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 979)
+
+
+Started GET "/api/adminstrator/planes/[object%20HTMLSelectElement]" for 127.0.0.1 at 2021-03-09 21:59:42 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"[object HTMLSelectElement]"}
+  [1m[36mPlane Load (0.7ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "[object HTMLSelectElement]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 979)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 22:00:26 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 4a547fc93369f744be81
+Version: webpack 4.46.0
+Time: 2637ms
+Built at: 03/09/2021 10:00:31 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-37f2c3d9f431940251fd.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-37f2c3d9f431940251fd.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-37f2c3d9f431940251fd.js js/index-37f2c3d9f431940251fd.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4916.9ms | Allocations: 6809)
+Completed 200 OK in 4918ms (Views: 4917.5ms | ActiveRecord: 0.0ms | Allocations: 7250)
+
+
+Started GET "/api/adminstrator/planes/undefined" for 127.0.0.1 at 2021-03-09 22:00:36 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"undefined"}
+  [1m[36mPlane Load (0.7ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 980)
+
+
+Started GET "/api/adminstrator/planes/test" for 127.0.0.1 at 2021-03-09 22:00:37 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"test"}
+  [1m[36mPlane Load (1.2ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 1071)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 22:07:29 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: ff404e88f17ba2f58d4c
+Version: webpack 4.46.0
+Time: 2708ms
+Built at: 03/09/2021 10:07:35 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-a5e5633896bf0ae299a1.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-a5e5633896bf0ae299a1.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-a5e5633896bf0ae299a1.js js/index-a5e5633896bf0ae299a1.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5496.7ms | Allocations: 6803)
+Completed 200 OK in 5498ms (Views: 5497.5ms | Allocations: 7241)
+
+
+Started GET "/api/adminstrator/planes/undefined" for 127.0.0.1 at 2021-03-09 22:07:41 +0200
+Processing by Api::Adminstrator::PlanesController#show as */*
+  Parameters: {"planeType"=>"undefined"}
+  [1m[36mPlane Load (0.8ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."planeType" = $1 LIMIT $2[0m  [["planeType", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/planes_controller.rb:13:in `show'
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 11.5ms | Allocations: 4180)
+
+
+Started GET "/api/adminstrator/flight" for 127.0.0.1 at 2021-03-09 22:20:11 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"api/adminstrator/flight", "page"=>{}}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 99.0ms | Allocations: 5574)
+Completed 200 OK in 100ms (Views: 99.6ms | Allocations: 5970)
+
+
+Started GET "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 22:20:26 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"api/adminstrator/flights", "page"=>{}}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 5568)
+Completed 200 OK in 22ms (Views: 21.8ms | Allocations: 6015)
+
+
+Started GET "/api/adminstrator/flights.json" for 127.0.0.1 at 2021-03-09 22:20:30 +0200
+Processing by PagesController#index as JSON
+  Parameters: {"path"=>"api/adminstrator/flights", "page"=>{}}
+Completed 406 Not Acceptable in 1ms (Allocations: 639)
+
+
+  
+ActionController::UnknownFormat (PagesController#index is missing a template for this request format and variant.
+
+request.formats: ["application/json"]
+request.variant: []):
+  
+actionpack (6.1.3) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (6.1.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (6.1.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.3) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.3) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+actiontext (6.1.3) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.3) lib/action_text/engine.rb:55:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.3) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.3) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.3) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.3) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.3) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.3) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.3) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.3) lib/rails/engine.rb:539:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/api/passenger/flights.json" for 127.0.0.1 at 2021-03-09 22:20:36 +0200
+Processing by Api::Passenger::FlightsController#index as JSON
+  Parameters: {"flight"=>{}}
+  [1m[36mFlight Load (1.0ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "seats"."id" FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 1]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[36mSeat Load (0.7ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 1]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 18.6ms | Allocations: 6246)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 22:22:56 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 5b6a75651c4c7f2e2932
+Version: webpack 4.46.0
+Time: 2766ms
+Built at: 03/09/2021 10:23:02 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-f6e81ff8d587545c6976.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-f6e81ff8d587545c6976.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-f6e81ff8d587545c6976.js js/index-f6e81ff8d587545c6976.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5571.8ms | Allocations: 6810)
+Completed 200 OK in 5573ms (Views: 5572.5ms | ActiveRecord: 0.0ms | Allocations: 7252)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 22:23:42 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 51696198c2140cd178f0
+Version: webpack 4.46.0
+Time: 2642ms
+Built at: 03/09/2021 10:23:47 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-f051da17e4a3b55d38c2.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-f051da17e4a3b55d38c2.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-f051da17e4a3b55d38c2.js js/index-f051da17e4a3b55d38c2.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5194.1ms | Allocations: 6802)
+Completed 200 OK in 5198ms (Views: 5195.5ms | ActiveRecord: 0.0ms | Allocations: 7243)
+
+
+Started POST "/api/adminstrator/flight" for 127.0.0.1 at 2021-03-09 22:23:53 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/api/adminstrator/flight"):
+  
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 22:24:52 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 956512994dd991b4ed6e
+Version: webpack 4.46.0
+Time: 2005ms
+Built at: 03/09/2021 10:24:56 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-5e1a2c4cfcf4bc2d6c96.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-5e1a2c4cfcf4bc2d6c96.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-5e1a2c4cfcf4bc2d6c96.js js/index-5e1a2c4cfcf4bc2d6c96.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3841.9ms | Allocations: 6798)
+Completed 200 OK in 3843ms (Views: 3842.5ms | ActiveRecord: 0.0ms | Allocations: 7239)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 22:25:02 +0200
+  
+ActionController::RoutingError (uninitialized constant Api::Adminstrator::FlightsController
+Did you mean?  Api::Adminstrator::FligthsController):
+  
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 22:25:08 +0200
+  
+ActionController::RoutingError (uninitialized constant Api::Adminstrator::FlightsController
+Did you mean?  Api::Adminstrator::FligthsController):
+  
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 22:26:18 +0200
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 277)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 8007)
+Completed 200 OK in 43ms (Views: 32.2ms | ActiveRecord: 0.0ms | Allocations: 11155)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 22:26:22 +0200
+Processing by Api::Adminstrator::FlightsController#create as JSON
+  Parameters: {"flight"=>{}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 15ms (ActiveRecord: 8.9ms | Allocations: 780)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: flight
+Did you mean?  flight
+               action
+               controller):
+  
+app/controllers/api/adminstrator/flights_controller.rb:17:in `flight_params'
+app/controllers/api/adminstrator/flights_controller.rb:7:in `create'
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 22:28:12 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 277)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 8007)
+Completed 200 OK in 44ms (Views: 32.6ms | ActiveRecord: 0.0ms | Allocations: 11155)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 22:28:17 +0200
+Processing by Api::Adminstrator::FlightsController#create as JSON
+  Parameters: {"flight"=>{}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 14ms (ActiveRecord: 8.6ms | Allocations: 779)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: flight
+Did you mean?  flight
+               action
+               controller):
+  
+app/controllers/api/adminstrator/flights_controller.rb:17:in `flight_params'
+app/controllers/api/adminstrator/flights_controller.rb:7:in `create'
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 22:29:57 +0200
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 277)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 2a046ae00e56fdb8830d
+Version: webpack 4.46.0
+Time: 2652ms
+Built at: 03/09/2021 10:30:03 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-7588877b0171c8710102.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-7588877b0171c8710102.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-7588877b0171c8710102.js js/index-7588877b0171c8710102.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5253.6ms | Allocations: 9323)
+Completed 200 OK in 5267ms (Views: 5258.0ms | ActiveRecord: 0.0ms | Allocations: 12471)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 22:30:07 +0200
+Processing by Api::Adminstrator::FlightsController#create as JSON
+  Parameters: {"flight"=>{}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 17ms (ActiveRecord: 2.1ms | Allocations: 779)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: flight
+Did you mean?  flight
+               action
+               controller):
+  
+app/controllers/api/adminstrator/flights_controller.rb:17:in `flight_params'
+app/controllers/api/adminstrator/flights_controller.rb:7:in `create'
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 22:33:41 +0200
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 277)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: ab2f99511949db6ec617
+Version: webpack 4.46.0
+Time: 2640ms
+Built at: 03/09/2021 10:33:46 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-72336a65a2c62751383d.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-72336a65a2c62751383d.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-72336a65a2c62751383d.js js/index-72336a65a2c62751383d.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5279.1ms | Allocations: 9327)
+Completed 200 OK in 5291ms (Views: 5282.8ms | ActiveRecord: 0.0ms | Allocations: 12475)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 22:33:55 +0200
+Processing by Api::Adminstrator::FlightsController#create as JSON
+  Parameters: {"flight"=>{}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 13ms (ActiveRecord: 9.5ms | Allocations: 779)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: flight
+Did you mean?  flight
+               action
+               controller):
+  
+app/controllers/api/adminstrator/flights_controller.rb:17:in `flight_params'
+app/controllers/api/adminstrator/flights_controller.rb:7:in `create'
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 22:34:40 +0200
+Processing by Api::Adminstrator::FlightsController#create as JSON
+  Parameters: {"destination"=>"paris", "departure"=>"Cairo", "plane_id"=>2, "flight"=>{"destination"=>"paris", "departure"=>"Cairo", "plane_id"=>2}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/adminstrator/flights_controller.rb:9:in `create'
+  [1m[36mPlane Load (1.0ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/flights_controller.rb:9:in `create'
+  [1m[36mFlight Create (13.3ms)[0m  [1m[32mINSERT INTO "flights" ("destination", "departure", "plane_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["destination", "paris"], ["departure", "Cairo"], ["plane_id", 2], ["created_at", "2021-03-09 20:34:40.133264"], ["updated_at", "2021-03-09 20:34:40.133264"]]
+  ↳ app/controllers/api/adminstrator/flights_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/adminstrator/flights_controller.rb:9:in `create'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "seats"."id" FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 2]]
+  ↳ app/controllers/api/adminstrator/flights_controller.rb:10:in `create'
+Completed 200 OK in 66ms (Views: 0.1ms | ActiveRecord: 28.1ms | Allocations: 19432)
+
+
+Started GET "/api/passenger/flights.json" for 127.0.0.1 at 2021-03-09 22:35:05 +0200
+Processing by Api::Passenger::FlightsController#index as JSON
+  Parameters: {"flight"=>{}}
+  [1m[36mFlight Load (0.9ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "seats"."id" FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 1]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[36mSeat Load (1.6ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 1]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "seats"."id" FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 2]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[36mSeat Load (0.7ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 2]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 4.8ms | Allocations: 8428)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 22:36:54 +0200
+Processing by Api::Adminstrator::FlightsController#create as JSON
+  Parameters: {"destination"=>"paris", "departure"=>"Cairo", "plane_id"=>2, "flight"=>{"destination"=>"paris", "departure"=>"Cairo", "plane_id"=>2}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/adminstrator/flights_controller.rb:9:in `create'
+  [1m[36mPlane Load (1.4ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/flights_controller.rb:9:in `create'
+  [1m[36mFlight Create (1.0ms)[0m  [1m[32mINSERT INTO "flights" ("destination", "departure", "plane_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["destination", "paris"], ["departure", "Cairo"], ["plane_id", 2], ["created_at", "2021-03-09 20:36:54.897051"], ["updated_at", "2021-03-09 20:36:54.897051"]]
+  ↳ app/controllers/api/adminstrator/flights_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/adminstrator/flights_controller.rb:9:in `create'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "seats"."id" FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 3]]
+  ↳ app/controllers/api/adminstrator/flights_controller.rb:10:in `create'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 5.8ms | Allocations: 4632)
+
+
+Started GET "/api/passenger/flights.json" for 127.0.0.1 at 2021-03-09 22:37:08 +0200
+Processing by Api::Passenger::FlightsController#index as JSON
+  Parameters: {"flight"=>{}}
+  [1m[36mFlight Load (1.1ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "seats"."id" FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 1]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[36mSeat Load (0.9ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 1]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "seats"."id" FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 2]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[36mSeat Load (1.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 2]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "seats"."id" FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 3]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+  [1m[36mSeat Load (1.0ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 3]]
+  ↳ app/controllers/api/passenger/flights_controller.rb:9:in `index'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 7.6ms | Allocations: 6232)
+
+
+Started POST "/api/adminstrator/flights" for 127.0.0.1 at 2021-03-09 22:37:19 +0200
+Processing by Api::Adminstrator::FlightsController#create as JSON
+  Parameters: {"destination"=>"zanzibar", "departure"=>"Cairo", "plane_id"=>2, "flight"=>{"destination"=>"zanzibar", "departure"=>"Cairo", "plane_id"=>2}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/adminstrator/flights_controller.rb:9:in `create'
+  [1m[36mPlane Load (0.9ms)[0m  [1m[34mSELECT "planes".* FROM "planes" WHERE "planes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/adminstrator/flights_controller.rb:9:in `create'
+  [1m[36mFlight Create (1.0ms)[0m  [1m[32mINSERT INTO "flights" ("destination", "departure", "plane_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["destination", "zanzibar"], ["departure", "Cairo"], ["plane_id", 2], ["created_at", "2021-03-09 20:37:19.566847"], ["updated_at", "2021-03-09 20:37:19.566847"]]
+  ↳ app/controllers/api/adminstrator/flights_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/adminstrator/flights_controller.rb:9:in `create'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "seats"."id" FROM "seats" WHERE "seats"."flight_id" = $1[0m  [["flight_id", 4]]
+  ↳ app/controllers/api/adminstrator/flights_controller.rb:10:in `create'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 5.0ms | Allocations: 4621)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 22:40:15 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: b488da2a3bcaf712e968
+Version: webpack 4.46.0
+Time: 2700ms
+Built at: 03/09/2021 10:40:21 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-ce6c93a158e6d7bd8912.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-ce6c93a158e6d7bd8912.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-ce6c93a158e6d7bd8912.js js/index-ce6c93a158e6d7bd8912.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5395.4ms | Allocations: 6811)
+Completed 200 OK in 5398ms (Views: 5396.4ms | ActiveRecord: 0.0ms | Allocations: 7255)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 23:01:12 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 0ae3b5a4a7c19d0f7a4b
+Version: webpack 4.46.0
+Time: 2620ms
+Built at: 03/09/2021 11:01:17 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-6ec4a8688ae122603f1f.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-6ec4a8688ae122603f1f.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-6ec4a8688ae122603f1f.js js/index-6ec4a8688ae122603f1f.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5534.8ms | Allocations: 6803)
+Completed 200 OK in 5543ms (Views: 5537.8ms | Allocations: 7242)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 23:01:36 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 09957777414e7da3264e
+Version: webpack 4.46.0
+Time: 2356ms
+Built at: 03/09/2021 11:01:40 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-7aa692316eff6ac0a44f.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-7aa692316eff6ac0a44f.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-7aa692316eff6ac0a44f.js js/index-7aa692316eff6ac0a44f.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4647.4ms | Allocations: 7012)
+Completed 200 OK in 4649ms (Views: 4648.1ms | Allocations: 7452)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 23:01:50 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 947f7923194a162f3b0b
+Version: webpack 4.46.0
+Time: 1924ms
+Built at: 03/09/2021 11:01:53 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-e30d2fcafcb87bad3487.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-e30d2fcafcb87bad3487.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-e30d2fcafcb87bad3487.js js/index-e30d2fcafcb87bad3487.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3670.9ms | Allocations: 6798)
+Completed 200 OK in 3672ms (Views: 3671.5ms | Allocations: 7237)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 23:04:27 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 6ad3ca1eb1975554679c
+Version: webpack 4.46.0
+Time: 2692ms
+Built at: 03/09/2021 11:04:32 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-258031d3c1e9fa31dfa3.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-258031d3c1e9fa31dfa3.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-258031d3c1e9fa31dfa3.js js/index-258031d3c1e9fa31dfa3.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4814.9ms | Allocations: 6799)
+Completed 200 OK in 4816ms (Views: 4815.4ms | Allocations: 7237)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 23:05:12 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 9ea16a68fcc33e906ee2
+Version: webpack 4.46.0
+Time: 2689ms
+Built at: 03/09/2021 11:05:17 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-7e905dbb4a81ddc880b4.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-7e905dbb4a81ddc880b4.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-7e905dbb4a81ddc880b4.js js/index-7e905dbb4a81ddc880b4.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5261.1ms | Allocations: 6802)
+Completed 200 OK in 5262ms (Views: 5261.6ms | Allocations: 7240)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 23:06:04 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: a0e88d1bcc6711542c7c
+Version: webpack 4.46.0
+Time: 2676ms
+Built at: 03/09/2021 11:06:09 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-9dd4fefec2d98d52eae4.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-9dd4fefec2d98d52eae4.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-9dd4fefec2d98d52eae4.js js/index-9dd4fefec2d98d52eae4.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5467.7ms | Allocations: 6802)
+Completed 200 OK in 5469ms (Views: 5468.3ms | Allocations: 7241)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-09 23:09:49 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 761378104973ea59d74a
+Version: webpack 4.46.0
+Time: 2679ms
+Built at: 03/09/2021 11:09:54 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-2fceab8ab234205abbaf.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-2fceab8ab234205abbaf.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-2fceab8ab234205abbaf.js js/index-2fceab8ab234205abbaf.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5396.1ms | Allocations: 6804)
+Completed 200 OK in 5398ms (Views: 5396.9ms | Allocations: 7247)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-10 00:27:22 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 00c8d70858dd40879fa0
+Version: webpack 4.46.0
+Time: 2443ms
+Built at: 03/10/2021 12:27:27 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-f5e1e43533317bf4ee9c.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-f5e1e43533317bf4ee9c.js.map   1.48 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-f5e1e43533317bf4ee9c.js js/index-f5e1e43533317bf4ee9c.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 74 hidden modules
+
+ERROR in ./app/javascript/components/Plane/Plane.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/app/javascript/components/Plane/Plane.js: JSX attributes must only be assigned a non-empty expression (24:19)
+
+  22 |             handleChange = {handleChange}
+  23 |             handleSubmit = {handleSubmit} 
+> 24 |             flight={}
+     |                    ^
+  25 |             />
+  26 |         </div>
+  27 |     )
+    at Object._raise (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:776:17)
+    at Object.raiseWithData (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:769:17)
+    at Object.raise (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:737:17)
+    at Object.jsxParseAttributeValue (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:4994:16)
+    at Object.jsxParseAttribute (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:5043:44)
+    at Object.jsxParseOpeningElementAfterName (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:5063:28)
+    at Object.jsxParseOpeningElementAt (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:5056:17)
+    at Object.jsxParseElementAt (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:5088:33)
+    at Object.jsxParseElementAt (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:5104:32)
+    at Object.jsxParseElement (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:5162:17)
+    at Object.parseExprAtom (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:5169:19)
+    at Object.parseExprSubscripts (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10637:23)
+    at Object.parseUpdate (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10617:21)
+    at Object.parseMaybeUnary (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10595:23)
+    at Object.parseExprOps (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10456:23)
+    at Object.parseMaybeConditional (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10430:23)
+    at Object.parseMaybeAssign (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10393:21)
+    at /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10360:39
+    at Object.allowInAnd (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:12033:12)
+    at Object.parseMaybeAssignAllowIn (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10360:17)
+    at Object.parseParenAndDistinguishExpression (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:11237:28)
+    at Object.parseExprAtom (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10955:21)
+    at Object.parseExprAtom (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:5174:20)
+    at Object.parseExprSubscripts (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10637:23)
+    at Object.parseUpdate (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10617:21)
+    at Object.parseMaybeUnary (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10595:23)
+    at Object.parseExprOps (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10456:23)
+    at Object.parseMaybeConditional (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10430:23)
+    at Object.parseMaybeAssign (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10393:21)
+    at Object.parseExpressionBase (/Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/node_modules/@babel/parser/lib/index.js:10338:23)
+ @ ./app/javascript/components/App.js 11:0-34 54:15-20
+ @ ./app/javascript/packs/index.jsx
+ @ multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5253.6ms | Allocations: 6777)
+Completed 200 OK in 5271ms (Views: 5260.2ms | Allocations: 7217)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-10 00:28:21 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 68015d8a2f1b91dae6da
+Version: webpack 4.46.0
+Time: 2708ms
+Built at: 03/10/2021 12:28:26 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-695985abdcd452a665ab.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-695985abdcd452a665ab.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-695985abdcd452a665ab.js js/index-695985abdcd452a665ab.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 75 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5233.4ms | Allocations: 6839)
+Completed 200 OK in 5235ms (Views: 5234.2ms | Allocations: 7278)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-10 00:31:44 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 6d4767041e69fbd213b2
+Version: webpack 4.46.0
+Time: 2486ms
+Built at: 03/10/2021 12:31:49 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-437573ca3bfbd9c00d3f.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-437573ca3bfbd9c00d3f.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-437573ca3bfbd9c00d3f.js js/index-437573ca3bfbd9c00d3f.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 75 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5150.6ms | Allocations: 6835)
+Completed 200 OK in 5154ms (Views: 5151.8ms | Allocations: 7273)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-10 00:33:25 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: f19098eabfd37693e219
+Version: webpack 4.46.0
+Time: 2472ms
+Built at: 03/10/2021 12:33:30 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-ac263a1be56678cf594c.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-ac263a1be56678cf594c.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-ac263a1be56678cf594c.js js/index-ac263a1be56678cf594c.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 75 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5107.7ms | Allocations: 6838)
+Completed 200 OK in 5109ms (Views: 5108.4ms | Allocations: 7276)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-10 00:34:40 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 27f658b9b4defa6c1ca0
+Version: webpack 4.46.0
+Time: 2476ms
+Built at: 03/10/2021 12:34:46 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-982d5d632968e06ca254.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-982d5d632968e06ca254.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-982d5d632968e06ca254.js js/index-982d5d632968e06ca254.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 75 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5296.1ms | Allocations: 6836)
+Completed 200 OK in 5297ms (Views: 5296.5ms | Allocations: 7274)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-10 00:36:49 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: d1b4fc85ac830a35a20d
+Version: webpack 4.46.0
+Time: 2449ms
+Built at: 03/10/2021 12:36:54 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-803f91728971300cabf8.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-803f91728971300cabf8.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-803f91728971300cabf8.js js/index-803f91728971300cabf8.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 75 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5015.1ms | Allocations: 6835)
+Completed 200 OK in 5025ms (Views: 5022.6ms | Allocations: 7273)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-10 00:37:54 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: a82f657fff9f082f8122
+Version: webpack 4.46.0
+Time: 2525ms
+Built at: 03/10/2021 12:37:59 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-a72e07908c8b1419c1e5.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-a72e07908c8b1419c1e5.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-a72e07908c8b1419c1e5.js js/index-a72e07908c8b1419c1e5.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 75 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5295.7ms | Allocations: 6847)
+Completed 200 OK in 5299ms (Views: 5297.7ms | Allocations: 7287)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-10 00:41:32 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 3426acc956d91f05a672
+Version: webpack 4.46.0
+Time: 2502ms
+Built at: 03/10/2021 12:41:38 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-acff4d69565617127a08.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-acff4d69565617127a08.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-acff4d69565617127a08.js js/index-acff4d69565617127a08.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 75 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5267.7ms | Allocations: 6835)
+Completed 200 OK in 5269ms (Views: 5268.3ms | Allocations: 7275)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-10 00:43:23 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 4e91627550e6c315c51c
+Version: webpack 4.46.0
+Time: 2714ms
+Built at: 03/10/2021 12:43:28 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-29d40515ae6e85adac21.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-29d40515ae6e85adac21.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-29d40515ae6e85adac21.js js/index-29d40515ae6e85adac21.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 75 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5265.5ms | Allocations: 6835)
+Completed 200 OK in 5267ms (Views: 5266.3ms | Allocations: 7274)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-10 00:44:20 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 5c587cb2de9d6810c139
+Version: webpack 4.46.0
+Time: 2431ms
+Built at: 03/10/2021 12:44:25 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-147aeab14361d24c795b.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-147aeab14361d24c795b.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-147aeab14361d24c795b.js js/index-147aeab14361d24c795b.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 75 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5080.0ms | Allocations: 6838)
+Completed 200 OK in 5083ms (Views: 5080.8ms | Allocations: 7276)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-10 00:46:18 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: 102660acd798df7dd0e1
+Version: webpack 4.46.0
+Time: 2468ms
+Built at: 03/10/2021 12:46:23 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-9ea5da2cf3ba6635aa47.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-9ea5da2cf3ba6635aa47.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-9ea5da2cf3ba6635aa47.js js/index-9ea5da2cf3ba6635aa47.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 75 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5048.0ms | Allocations: 6838)
+Completed 200 OK in 5054ms (Views: 5050.6ms | Allocations: 7276)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-10 00:48:55 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ibrahimshaarawy/Desktop/sha3raair/sha3raair/public/packs
+[Webpacker] Hash: beba2397e7c28cb42b74
+Version: webpack 4.46.0
+Time: 2522ms
+Built at: 03/10/2021 12:49:00 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+          js/index-e3c862817e0f7992c478.js   1.34 MiB        index  [emitted] [immutable]  index
+      js/index-e3c862817e0f7992c478.js.map   1.49 MiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+Entrypoint index = js/index-e3c862817e0f7992c478.js js/index-e3c862817e0f7992c478.js.map
+[0] multi ./app/javascript/packs/index.css ./app/javascript/packs/index.jsx 40 bytes {index} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/index.css] 601 bytes {index} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/packs/index.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/javascript/packs/index.css 5.64 KiB {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 75 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5151.5ms | Allocations: 6846)
+Completed 200 OK in 5153ms (Views: 5152.3ms | Allocations: 7284)
+
+
+Started GET "/adminstrator/planes" for 127.0.0.1 at 2021-03-10 00:49:30 +0200
+Processing by PagesController#index as HTML
+  Parameters: {"path"=>"adminstrator/planes"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 5585)
+Completed 200 OK in 36ms (Views: 35.3ms | Allocations: 6024)
+
+
