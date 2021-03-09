@@ -10,9 +10,13 @@ module Api
 			end
 
 			def show
-				flight = Flight.find_by(id: id)
+				flight = Flight.find(params[:id])
 
 				render json: FlightSerializer.new(flight, options).serialized_json
+			end
+
+			def flight_params
+				params.require(:flight).permit(:id)
 			end
 
 			def options

@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   	namespace :adminstrator do
   		resources :admins,param: :user, only: [:create, :destroy, :index, :show]
   		resources :planes, param: :planeType, only: [:create, :destroy, :index, :show]
-  		resources :flights, param: :destination, only: [:create, :destroy]
+  		resources :flights, param: :id, only: [:create, :destroy]
   		resources :seats, param: :pnr, only: [:create, :destroy]
   	end
   	namespace :passenger do
-  		resources :flights, only: [:index, :show]
+  		resources :flights, param: :id, only: [:index, :show]
   		resources :seats, param: :pnr, only: [:index, :update, :show]
   	end
   end
