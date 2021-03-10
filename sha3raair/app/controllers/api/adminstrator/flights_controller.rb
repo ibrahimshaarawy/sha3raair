@@ -1,6 +1,6 @@
 module Api
 	module Adminstrator
-		class FligthsController < ApplicationController
+		class FlightsController < ApplicationController
 			protect_from_forgery with: :null_session
 
 			def create
@@ -14,7 +14,7 @@ module Api
 			end
 
 			def flight_params
-				params.require(:flight).permit(:destination, :description, :plane_id)
+				params.require(:flight).permit(:destination, :departure, :plane_id)
 			end
 		end
 	end
